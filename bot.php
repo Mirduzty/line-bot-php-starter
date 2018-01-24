@@ -57,6 +57,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			$text = $event['type'].'</br> userID'.$show_user_id.' </br>'.$event['source']['type'].'</br> time'.$event['timestamp'];
+			//timestamp substr left 10 charecter or php date('Y-m-d',time);
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
