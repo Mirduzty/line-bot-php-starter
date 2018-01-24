@@ -90,9 +90,10 @@ if (!is_null($events['events'])) {
 			
 			if($result){
 			
+				$userData = json_decode($result, true);
 				// Get text sent
 
-				$text = $result['displayName'].'</br>'.$result['userId'];
+				$text = $userData['displayName'].'</br>'.$userData['userId'];
 				// Get replyToken
 				$to = $event['source']['userId'];
 
