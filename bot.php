@@ -138,7 +138,7 @@ if (!is_null($events['events'])) {
 				
 			}else if($event['source']['type'] == 'group'){
 			
-				$text = 'Join GroupID:'.$event['source']['groupId'].' </br>เวลา :'.date('Y-m-d H:i:s',substr($event['timestamp'], 0,10));
+				$text = 'Join GroupID:'.$event['source']['groupId'].' </br>เวลา :'.date('Y-m-d H:i:s',substr($event['timestamp'],0,10)).'['.substr($event['timestamp'],0,10).']';
 				// Get replyToken
 				$to = $event['source']['groupId'];
 
