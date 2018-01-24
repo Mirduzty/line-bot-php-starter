@@ -173,6 +173,35 @@ if (!is_null($events['events'])) {
 			
 		}
 	}
+}else{
+
+	$text = 'ทดสอบ Bot ส่งข้อมความ';
+	// Get replyToken
+	$to = 'U4185f679aa03ed00d85b3448abbfc72e';
+
+	// Build message to reply back
+	$messages = [
+		'type' => 'text',
+		'text' => $text
+	];
+
+
+	$data = [
+		'to' => $to,
+		'messages' => [$messages],
+	];
+	$post = json_encode($data);
+	$url = 'https://api.line.me/v2/bot/message/push';
+
+	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);	
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	$result = curl_exec($ch);
+
 }
 
 echo "OK";
