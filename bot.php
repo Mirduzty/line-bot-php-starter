@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 			
 			// Get text sent
 			
-			$text = $event['type'].'\n userID'.$event['source']['userID'];
+			$text = $event['type'].'</br> userID'.$event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
