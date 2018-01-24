@@ -46,8 +46,17 @@ if (!is_null($events['events'])) {
 		
 			
 			// Get text sent
+			if($event['source']['type'] == 'user'){
 			
-			$text = $event['type'].'</br> userID'.$event['source']['userId'].' </br>'.$event['source']['type'];
+				$show_user_id = $event['source']['userId'];
+				
+			}else if($event['source']['type'] == 'group'){
+				
+				$show_user_id = $event['source']['groupId'];
+				
+			}
+			
+			$text = $event['type'].'</br> userID'.$show_user_id.' </br>'.$event['source']['type'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -78,7 +87,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 			
-			$url = 'https://api.line.me/v2/bot/profile/'.$event['source']['userId'];
+			$url = 'https://api.line.me/v2/bot/profile/'.$show_user_id;
 			
 			$headers = array('Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
