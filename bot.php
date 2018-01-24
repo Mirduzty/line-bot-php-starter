@@ -56,7 +56,7 @@ if (!is_null($events['events'])) {
 				
 			}
 			
-			$text = $event['type'].'</br> userID'.$show_user_id.' </br>'.$event['source']['type'];
+			$text = $event['type'].'</br> userID'.$show_user_id.' </br>'.$event['source']['type'].'</br> time'.$event['timestamp'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
