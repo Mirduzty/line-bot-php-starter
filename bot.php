@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
 			
 				$text = 'Join GroupID:'.$event['source']['groupId'].' </br>เวลา :'.date('Y-m-d H:i:s',substr($event['timestamp'], 0,10));
 				// Get replyToken
-				$to = $event['source']['userId'];
+				$to = $event['source']['groupId'];
 
 				// Build message to reply back
 				$messages = [
