@@ -87,7 +87,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 			
-			if($event['source']['type'] == 'user'){
+			if($event['type'] == 'follow'){
 			
 				$url = 'https://api.line.me/v2/bot/profile/'.$show_user_id;
 
@@ -136,7 +136,7 @@ if (!is_null($events['events'])) {
 				curl_close($ch);
 				echo $result . "\r\n";
 				
-			}else if($event['source']['type'] == 'group'){
+			}else if($event['type'] == 'join'){
 			
 				$text = 'Join GroupID:'.$event['source']['groupId'].' </br>เวลา :'.date('Y-m-d H:i:s',substr($event['timestamp'],0,10)).'['.substr($event['timestamp'],0,10).']';
 				// Get replyToken
