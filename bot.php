@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Bangkok");
 $access_token = 'I/LJS0JniZFVPHHlag/+mp8HpLqhtizFs9Pxj6UkdJnVio4lIMmjnhB8/OFYN4CTwNoa1f1hnvV74wnc7eFFYn5Y70qi3eFCXSO5IfFKf82oyLS0dMVyeAAxUE/DI24J+5XM5p4Y4QCJf5on24aemgdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
