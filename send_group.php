@@ -33,3 +33,5 @@ $events = json_decode($content, true);
         echo $result . "\r\n";
 
 echo "OK";
+
+phpinfo();
