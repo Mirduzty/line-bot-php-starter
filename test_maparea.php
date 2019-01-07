@@ -191,8 +191,8 @@
             };
 
             var tryAPIGeolocation = function() {
-                jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAfObMpP7VjqLlwooDn5Dy5pgUdQCRq53Q", function(success) {
-                //jQuery.post( "http://ip-api.com/json", function(success) {
+                //jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAfObMpP7VjqLlwooDn5Dy5pgUdQCRq53Q", function(success) {
+                jQuery.post( "http://ip-api.com/json", function(success) {
                     //apiGeolocationSuccess({coords: {latitude: success.location.lat, longitude: success.location.lng}});
                     console.log(success.lat+" , "+success.lon);
                     
