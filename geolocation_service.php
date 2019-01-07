@@ -17,6 +17,7 @@
             var x = $("#demo");
             function getLocation()
             {
+                console.log("start getlocation");
 
                 if (navigator.geolocation)
                 {
@@ -29,7 +30,7 @@
 
 
             function showposition(getLatLng) {
-
+                console.log("LatLng: "+getLatLng);
                 var lat = getLatLng.coords.latitude;
                 var lon = getLatLng.coords.longitude;
                 
