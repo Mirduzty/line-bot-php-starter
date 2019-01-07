@@ -35,7 +35,7 @@
                 console.log(lat);
                 console.log(lon);
                 
-                x.text('{ "coords":{"latitude":"'+lat+'","longitude":"'+lon+'"}}');
+                $("#demo").text('{ "coords":{"latitude":"'+lat+'","longitude":"'+lon+'"}}');
 
             }
 
