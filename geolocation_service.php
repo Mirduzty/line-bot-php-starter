@@ -24,17 +24,18 @@
                     navigator.geolocation.getCurrentPosition(showposition, showError);
                 }
                 else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
+                    x.text("Geolocation is not supported by this browser.");
                 }
             }
 
 
-            function showposition(getLatLng) {
-                console.log("LatLng: "+getLatLng);
+            function showposition(getLatLng) {                
                 var lat = getLatLng.coords.latitude;
                 var lon = getLatLng.coords.longitude;
+                console.log(lat);
+                console.log(lon);
                 
-                x.innerHTML = '{ "coords":{"latitude":"'+lat+'","longitude":"'+lon+'"}}';
+                x.text('{ "coords":{"latitude":"'+lat+'","longitude":"'+lon+'"}}');
 
             }
 
@@ -43,16 +44,16 @@
                 switch (error.code)
                 {
                     case error.PERMISSION_DENIED:
-                        x.innerHTML = "User denied the request for Geolocation."
+                        x.text("User denied the request for Geolocation.");
                         break;
                     case error.POSITION_UNAVAILABLE:
-                        x.innerHTML = "Location information is unavailable."
+                        x.text("Location information is unavailable.");
                         break;
                     case error.TIMEOUT:
-                        x.innerHTML = "The request to get user location timed out."
+                        x.text("The request to get user location timed out.");
                         break;
                     case error.UNKNOWN_ERROR:
-                        x.innerHTML = "An unknown error occurred."
+                        x.text("An unknown error occurred.");
                         break;
                 }
             }
@@ -62,7 +63,7 @@
     </head>
     <body>
 
-        <p class="intro" id="demo" style="display:block;" ></p>
+        <div id="demo" style="display:block;" ></div>
 
     </body>
 </html>
