@@ -9,6 +9,10 @@
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places,geometry&key=AIzaSyAfObMpP7VjqLlwooDn5Dy5pgUdQCRq53Q"></script>
 
         <script>
+            
+            $(document).ready(function(){
+                getLocation();
+            });
 
             var x = $("#demo");
             function getLocation()
