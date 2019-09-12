@@ -37,7 +37,7 @@ $mail->Password = "tui043261832";
 //Set who the message is to be sent from
 $mail->setFrom('suteerawad.tui@gmail.com', 'Lodner');
 //Set who the message is to be sent to
-$mail->addAddress($_POST['email'], '');
+$mail->addAddress($_REQUEST['email'], '');
 
 $mail->isHTML(true);
 //Set the subject line
