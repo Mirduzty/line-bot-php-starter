@@ -178,7 +178,8 @@ if (!is_null($events['events'])) {
 
 	$text = 'ทดสอบ Bot ส่งข้อมความ';
 	// Get replyToken
-	$to = 'U4185f679aa03ed00d85b3448abbfc72e';
+	//$to = 'U4185f679aa03ed00d85b3448abbfc72e';
+	$to = 'U95e1ff23da69b8571d749cab2ceeabbb';
 
 	// Build message to reply back
 	$messages = [
